@@ -11,7 +11,7 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
-        <PackageId>Arch.System.SourceGenerator</PackageId>
+        <PackageId>EasyEngine.ECS.System.SourceGenerator</PackageId>
         <Title>Arch.System.SourceGenerator</Title>
         <Version>1.2.1</Version>
         <Authors>genaray</Authors>
@@ -32,6 +32,7 @@ Some other small fixes. </PackageReleaseNotes>
         <Copyright>Apache2.0</Copyright>
         <PackageLicenseUrl></PackageLicenseUrl>
         <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
+        <RootNamespace>Arch.System.SourceGenerator</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

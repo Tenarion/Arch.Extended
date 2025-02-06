@@ -9,7 +9,7 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
-        <PackageId>Arch.System</PackageId>
+        <PackageId>EasyEngine.ECS.System</PackageId>
         <Title>Arch.System</Title>
         <Version>1.0.5</Version>
         <Authors>genaray</Authors>
@@ -32,6 +32,8 @@ Some other small improvements.</PackageReleaseNotes>
         <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
 
         <UnityPublish>true</UnityPublish>
+
+        <RootNamespace>Arch.System</RootNamespace>
     </PropertyGroup>
 
 </Project>

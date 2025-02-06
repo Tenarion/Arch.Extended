@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Arch.LowLevel.Jagged;
 
-[assembly: InternalsVisibleTo("Arch.LowLevel.Tests")]
+[assembly: InternalsVisibleTo("EasyEngine.ECS.LowLevel.Tests")]
 namespace Arch.LowLevel;
 
 /// <summary>

@@ -5,7 +5,7 @@ using Arch.Core.Extensions;
 using Arch.Core.Extensions.Dangerous;
 using Arch.Core.Utils;
 
-[assembly:InternalsVisibleTo("Arch.Relationships.Tests")]
+[assembly:InternalsVisibleTo("EasyEngine.ECS.Relationships.Tests")]
 namespace Arch.Relationships;
 
 /// <summary>
@@ -41,7 +41,7 @@ public static class WorldRelationshipExtensions
         foreach (var (target, inRelationship) in relationships.Elements)
         {
             var id = inRelationship.ComponentTypeId;
-            var componentType = new ComponentType(id, null, 0, false);
+            var componentType = new ComponentType(id, 0);
             
             // Get slots, chunk and array to prevent entity.Get(type) object allocation
             ref readonly var chunk = ref world.GetChunk(target);

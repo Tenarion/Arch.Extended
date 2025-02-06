@@ -3,7 +3,7 @@
     <PropertyGroup>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <TargetFrameworks>net6.0;net7.0;netstandard2.1</TargetFrameworks>
+        <TargetFrameworks>net7.0;net6.0;netstandard2.1</TargetFrameworks>
         <LangVersion>11</LangVersion>
 
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -11,24 +11,29 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
-        <Title>Arch.Persistence</Title>
-        <Description>A Persistence-Framework for Arch.</Description>
+        <Title>Arch.Relationships</Title>
+        <Description>Simple Entity-Relationships for Arch.</Description>
         <Copyright>Apache2.0</Copyright>
         <PackageProjectUrl>https://github.com/genaray/Arch.Extended</PackageProjectUrl>
         <RepositoryUrl>https://github.com/genaray/Arch.Extended.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>c#;.net;.net6;.net7;ecs;game;entity;gamedev; game-development; game-engine; entity-component-system; arch;</PackageTags>
-        <PackageReleaseNotes>Updated to Arch 1.2.8</PackageReleaseNotes>
-        <Version>1.0.4</Version>
+        <PackageReleaseNotes>Relationships now use less memory and are serializable.</PackageReleaseNotes>
+        <Authors>genaray</Authors>
+        <Version>1.0.1</Version>
         <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
 
         <UnityPublish>true</UnityPublish>
+
+        <RootNamespace>Arch.Relationships</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DefineConstants>TRACE;EVENTS</DefineConstants>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Arch" Version="1.2.8" />
-      <PackageReference Include="MessagePack" Version="2.6.100-alpha" />
-      <PackageReference Include="Utf8Json" Version="1.3.7" />
+        <ProjectReference Include="..\..\Arch\src\EasyEngine.ECS\EasyEngine.ECS.csproj" />
     </ItemGroup>
 
 </Project>

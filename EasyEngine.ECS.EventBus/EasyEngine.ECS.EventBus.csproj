@@ -1,26 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net7.0; net6.0; netstandard2.1</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>11</LangVersion>
+        <RootNamespace>Arch.Bus</RootNamespace>
 
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 
-        <PackageId>Arch.LowLevel</PackageId>
-        <Title>Arch.LowLevel</Title>
-        <Version>1.1.2</Version>
+        <PackageId>EasyEngine.ECS.EventBus</PackageId>
+        <Title>Arch.EventBus</Title>
+        <Version>1.0.2</Version>
         <Authors>genaray</Authors>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-        <Description>LowLevel tools for arch.</Description>
-        <PackageReleaseNotes>Refactored JaggedArrays.
-Increased performance of JaggedArrays.
-Added Array, a new class that acts as a Wrapper around normal generic Arrays for unsafe operations. 
-Added tests. </PackageReleaseNotes>
+        <Description>A basic EventBus using source generation.</Description>
+        <PackageReleaseNotes>Fixed some issues with source generation.
+        </PackageReleaseNotes>
         <PackageTags>c#;.net;.net6;.net7;ecs;game;entity;gamedev; game-development; game-engine; entity-component-system; arch;</PackageTags>
 
         <PackageProjectUrl>https://github.com/genaray/Arch.Extended</PackageProjectUrl>
@@ -33,13 +31,14 @@ Added tests. </PackageReleaseNotes>
         <Copyright>Apache2.0</Copyright>
         <PackageLicenseUrl></PackageLicenseUrl>
         <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
-
-        <UnityPublish>true</UnityPublish>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CommunityToolkit.HighPerformance" Version="8.2.2" />
-      <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.1.0" PrivateAssets="analyzers" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 
 </Project>
